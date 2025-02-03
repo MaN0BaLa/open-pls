@@ -53,12 +53,12 @@ function showMessage() {
     let messageElement = document.getElementById("message");
 
     // Show the final love message and make it bigger and bolder
-    messageElement.innerText = "I love you Meena Kutty ❤️";
+    messageElement.innerText = "I love you sooooo much Meena Kutty ❤️";
     messageElement.style.fontSize = "40px";  // Make the message bigger
     messageElement.style.fontWeight = "bold";  // Make the message bolder
 
     // Create heart splash animation (fireworks effect)
-    for (let i = 0; i < 20; i++) { // Create 20 hearts
+    for (let i = 0; i < 40; i++) { // Create 20 hearts
         let heart = document.createElement("div");
         heart.innerText = "❤️";
         heart.classList.add("heart");
