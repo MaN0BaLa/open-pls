@@ -50,9 +50,24 @@ function increaseYesButtonSize() {
 }
 
 function showMessage() {
-    // Show the final love message
-    document.getElementById("message").innerText = "I love you Meena Kutty ❤️";
-    
+    let messageElement = document.getElementById("message");
+
+    // Show the final love message and make it bigger and bolder
+    messageElement.innerText = "I love you Meena Kutty ❤️";
+    messageElement.style.fontSize = "40px";  // Make the message bigger
+    messageElement.style.fontWeight = "bold";  // Make the message bolder
+
+    // Create heart splash animation
+    let heart = document.createElement("div");
+    heart.innerText = "❤️";
+    heart.classList.add("heart");
+    document.body.appendChild(heart);
+
+    // Animate the heart
+    setTimeout(() => {
+        heart.remove(); // Remove heart after animation
+    }, 3000); // Remove heart after 3 seconds
+
     // Hide the question and buttons
     document.getElementById("question").style.display = "none";
     document.querySelector(".buttons").style.display = "none";
