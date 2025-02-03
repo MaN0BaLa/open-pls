@@ -33,16 +33,3 @@ function showMessage() {
     document.getElementById("question").style.display = "none";
     document.querySelector(".buttons").style.display = "none";
 }
-
-function createHearts() {
-    for (let i = 0; i < 15; i++) {
-        let heart = document.createElement("div");
-        heart.innerHTML = "❤️";
-        heart.className = "heart";
-        heart.style.left = Math.random() * window.innerWidth + "px";
-        heart.style.top = Math.random() * window.innerHeight + "px";
-        heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 4000);
-    }
-}
