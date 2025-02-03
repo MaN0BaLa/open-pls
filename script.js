@@ -40,8 +40,8 @@ function increaseYesButtonSize() {
 
     // Increase size until the maximum size is reached
     if (currentFontSize < maxFontSize || currentPadding < maxPadding) {
-        let newFontSize = currentFontSize * 2.0; // Increase font size by 200%
-        let newPadding = currentPadding * 2.0; // Increase padding by 200%
+        let newFontSize = currentFontSize * 1.5; // Increase font size by 50%
+        let newPadding = currentPadding * 1.5; // Increase padding by 50%
 
         // Set the new size, ensuring it doesn't exceed the maximum allowed values
         yesButton.style.fontSize = `${Math.min(newFontSize, maxFontSize)}px`;
