@@ -9,9 +9,17 @@ let sadMessages = [
 ];
 
 function showMessage() {
-    document.getElementById("message").innerText = "YAY! 💕 I love you, Meena! You're the best!";
+    // Change the message
+    document.getElementById("message").innerText = "I love you Meena Kutty ❤️";
+    
+    // Hide the question and buttons
+    document.getElementById("question").style.display = "none";
+    document.querySelector(".buttons").style.display = "none";
+
+    // Show hearts animation
     createHearts();
 }
+
 
 function sadMessage() {
     let randomIndex = Math.floor(Math.random() * sadMessages.length);
