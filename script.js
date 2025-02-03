@@ -20,11 +20,19 @@ function sadMessage() {
 
 function moveButton() {
     let button = document.getElementById("no");
-    let x = Math.random() * (window.innerWidth - 100);
-    let y = Math.random() * (window.innerHeight - 50);
+
+    // Get the viewport width & height
+    let maxX = window.innerWidth - button.clientWidth - 20;
+    let maxY = window.innerHeight - button.clientHeight - 20;
+
+    // Generate a random position within screen bounds
+    let x = Math.random() * maxX;
+    let y = Math.random() * maxY;
+
     button.style.left = `${x}px`;
     button.style.top = `${y}px`;
 }
+
 
 function createHearts() {
     for (let i = 0; i < 15; i++) {
