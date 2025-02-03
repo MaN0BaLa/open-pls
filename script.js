@@ -88,4 +88,22 @@ function showMessage() {
     // Hide the question and buttons
     document.getElementById("question").style.display = "none";
     document.querySelector(".buttons").style.display = "none";
+
+     // Fade out the message after 3 seconds
+    setTimeout(() => {
+        messageElement.style.opacity = "0";
+
+        // After fading, show the "CLICK HERE" button
+        setTimeout(() => {
+            let clickHereBtn = document.createElement("button");
+            clickHereBtn.innerText = "CLICK HERE";
+            clickHereBtn.id = "click-here";
+            clickHereBtn.onclick = function () {
+                window.location.href = "https://your-image-link.com"; // Replace with actual image link
+            };
+
+            document.body.appendChild(clickHereBtn);
+        }, 3000); // Delay before showing the button
+    }, 3000);
+}
 }
