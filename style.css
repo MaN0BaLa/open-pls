@@ -30,7 +30,7 @@ button {
     background-color: #28a745;
     color: white;
     font-size: 20px;
-    transition: font-size 0.3s ease; /* Smooth transition for size change */
+    transition: font-size 0.3s ease, padding 0.3s ease; /* Smooth transition for size and padding */
 }
 #no {
     background-color: red; /* Red button */
