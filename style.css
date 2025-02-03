@@ -9,14 +9,17 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 h1 {
     color: #d6336c;
     font-size: 2.5em;
 }
+
 .buttons {
     position: relative;
     margin-top: 20px;
 }
+
 button {
     font-size: 18px;
     padding: 12px 24px;
@@ -26,26 +29,28 @@ button {
     border-radius: 8px;
     transition: 0.3s;
 }
+
 #yes {
     background-color: #28a745;
     color: white;
     font-size: 20px;
-    transition: font-size 0.3s ease, padding 0.3s ease; /* Smooth transition for size and padding */
+    transition: font-size 0.3s ease, padding 0.3s ease;
 }
+
 #no {
-    background-color: red; /* Red button */
-    color: white; /* White text */
-    border: 2px solid darkred; /* Red border */
-    padding: 10px 20px; /* Adjust size */
-    font-size: 18px; /* Make text readable */
-    font-weight: bold; /* Bold text */
-    border-radius: 10px; /* Rounded corners */
-    cursor: pointer; /* Hand cursor */
-    transition: background-color 0.3s;
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: left 0.3s, top 0.3s;
 }
 
 #no:hover {
-    background-color: darkred; /* Darker red on hover */
+    background-color: darkred;
 }
 
 #message {
@@ -53,13 +58,17 @@ button {
     color: #d6336c;
     font-weight: bold;
     margin-top: 20px;
+    transition: font-size 0.3s, font-weight 0.3s;
 }
+
 .heart {
     position: absolute;
     color: red;
-    font-size: 20px;
+    font-size: 40px;
     animation: float 4s infinite;
+    z-index: 100; /* Ensure hearts are visible above other elements */
 }
+
 @keyframes float {
     0% { transform: translateY(0); opacity: 1; }
     50% { transform: translateY(-100px); opacity: 0.5; }
