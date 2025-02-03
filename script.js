@@ -13,6 +13,18 @@ let sadMessages = [
     "💘 I won't stop until you say YES!",
 ];
 
+let messageIndex = 0;
+
+function sadMessage() {
+    let messageElement = document.getElementById("message");
+
+    // Show the next sad message
+    messageElement.innerText = sadMessages[messageIndex];
+
+    // Loop through messages, restart if we reach the end
+    messageIndex = (messageIndex + 1) % sadMessages.length;
+}
+
 function showMessage() {
     // Show the final love message
     document.getElementById("message").innerText = "I love you Meena Kutty ❤️";
@@ -20,12 +32,6 @@ function showMessage() {
     // Hide the question and buttons
     document.getElementById("question").style.display = "none";
     document.querySelector(".buttons").style.display = "none";
-}
-
-let messageIndex = 0;
-function sadMessage() {
-    let randomIndex = Math.floor(Math.random() * sadMessages.length);
-    document.getElementById("message").innerText = sadMessages[randomIndex];
 }
 
 function createHearts() {
