@@ -16,6 +16,9 @@ let sadMessages = [
 
 let messageIndex = 0;
 
+let yesButton = document.getElementById("yes");
+let maxFontSize = 100; // Maximum size for the "YES" button in px
+
 function sadMessage() {
     let messageElement = document.getElementById("message");
 
@@ -30,13 +33,16 @@ function sadMessage() {
 }
 
 function increaseYesButtonSize() {
-    let yesButton = document.getElementById("yes");
-
-    // Get current font size and increase it
+    // Get current font size
     let currentFontSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    let newFontSize = currentFontSize * 1.2; // Increase size by 20%
 
-    yesButton.style.fontSize = `${newFontSize}px`; // Update font size
+    // Check if the size is smaller than the maximum size
+    if (currentFontSize < maxFontSize) {
+        let newFontSize = currentFontSize * 1.1; // Increase size by 10%
+
+        // Set the new font size
+        yesButton.style.fontSize = `${Math.min(newFontSize, maxFontSize)}px`; // Limit to max size
+    }
 }
 
 function showMessage() {
