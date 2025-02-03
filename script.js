@@ -115,7 +115,7 @@ function showMessage() {
 
     // Redirect to external link when clicked
     linkButton.onclick = function() {
-        window.location.href = "https://https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzVpdTcxNzFsd2VjNWk0emI5cmt0aHJnejEyY2U3dWE4Z2g4Y21ucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JdBVId6GmYIpjMSi4J/giphy.gif"; // Replace with your actual link
+        window.location.href = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzVpdTcxNzFsd2VjNWk0emI5cmt0aHJnejEyY2U3dWE4Z2g4Y21ucCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JdBVId6GmYIpjMSi4J/giphy.gif"; // Replace with your actual link
     };
 
     // Append button below the message
