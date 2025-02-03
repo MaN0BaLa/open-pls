@@ -6,46 +6,27 @@ let sadMessages = [
     "😭 I thought we were meant to be!",
     "💘 My heart is crying, Meena...",
     "😔 I’ll be the saddest person today..."
+    "😢 Are you sure, Meena?",
+    "💔 That hurts...",
+    "😭 Please don't say no...",
+    "🥺 Give me a chance...",
+    "💘 I won't stop until you say YES!",
 ];
 
 function showMessage() {
-    // Change the message
+    // Show the final love message
     document.getElementById("message").innerText = "I love you Meena Kutty ❤️";
     
     // Hide the question and buttons
     document.getElementById("question").style.display = "none";
     document.querySelector(".buttons").style.display = "none";
-
-    // Show hearts animation
-    createHearts();
 }
 
-
+let messageIndex = 0;
 function sadMessage() {
     let randomIndex = Math.floor(Math.random() * sadMessages.length);
     document.getElementById("message").innerText = sadMessages[randomIndex];
 }
-
-function moveButton() {
-    let button = document.getElementById("no");
-
-    // Get the maximum allowed positions (keeping it inside the viewport)
-    let maxX = window.innerWidth - button.offsetWidth - 20;
-    let maxY = window.innerHeight - button.offsetHeight - 20;
-
-    // Generate a random new position within screen bounds
-    let newX = Math.random() * maxX;
-    let newY = Math.random() * maxY;
-
-    // Apply the new position
-    button.style.left = `${newX}px`;
-    button.style.top = `${newY}px`;
-
-    // Ensure button stays visible
-    button.style.display = "block"; 
-}
-
-
 
 function createHearts() {
     for (let i = 0; i < 15; i++) {
