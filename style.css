@@ -91,19 +91,3 @@ button {
     
 }
 
-#click-here {
-    font-size: 24px;
-    font-weight: bold;
-    padding: 15px 30px;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: #ff4081;
-    color: white;
-    transition: 0.3s;
-}
-
-#click-here:hover {
-    background-color: #d6336c;
-}
