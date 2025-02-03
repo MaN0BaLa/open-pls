@@ -53,8 +53,8 @@ function showMessage() {
     let messageElement = document.getElementById("message");
 
     // Show the final love message and make it bigger and bolder
-    messageElement.innerText = "I love you Meena Kutty ❤️";
-    messageElement.style.fontSize = "40px";  // Make the message bigger
+    messageElement.innerText = "I love you sooooo much Meena Kutty ❤️";
+    messageElement.style.fontSize = "60px";  // Make the message bigger
     messageElement.style.fontWeight = "bold";  // Make the message bolder
 
     // Create heart splash animation
