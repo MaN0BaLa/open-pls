@@ -54,11 +54,9 @@ button {
 }
 
 #message {
-    font-size: 22px;
-    color: #d6336c;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: font-size 0.3s, font-weight 0.3s;
+    font-size: 40px !important;  /* Ensure the font size is applied */
+    font-weight: bold !important;
+    color: #d6336c !important;   /* Ensure the color is correct */
 }
 
 .heart {
