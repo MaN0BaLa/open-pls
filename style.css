@@ -32,7 +32,6 @@ button {
     font-size: 20px;
 }
 #no {
-    position: absolute; /* Allows movement */
     background-color: red; /* Red button */
     color: white; /* White text */
     border: 2px solid darkred; /* Red border */
@@ -41,14 +40,12 @@ button {
     font-weight: bold; /* Bold text */
     border-radius: 10px; /* Rounded corners */
     cursor: pointer; /* Hand cursor */
-    transition: left 0.3s, top 0.3s, background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 #no:hover {
     background-color: darkred; /* Darker red on hover */
 }
-
-
 
 #message {
     font-size: 22px;
