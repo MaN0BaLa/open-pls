@@ -22,8 +22,21 @@ function sadMessage() {
     // Show the next sad message
     messageElement.innerText = sadMessages[messageIndex];
 
+    // Increase the size of the YES button every time NO is clicked
+    increaseYesButtonSize();
+
     // Loop through messages, restart if we reach the end
     messageIndex = (messageIndex + 1) % sadMessages.length;
+}
+
+function increaseYesButtonSize() {
+    let yesButton = document.getElementById("yes");
+
+    // Get current font size and increase it
+    let currentFontSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+    let newFontSize = currentFontSize * 1.2; // Increase size by 20%
+
+    yesButton.style.fontSize = `${newFontSize}px`; // Update font size
 }
 
 function showMessage() {
