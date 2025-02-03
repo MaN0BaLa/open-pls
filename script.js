@@ -17,7 +17,8 @@ let sadMessages = [
 let messageIndex = 0;
 
 let yesButton = document.getElementById("yes");
-let maxFontSize = 100; // Maximum size for the "YES" button in px
+let maxFontSize = 120; // Maximum font size for YES button in px
+let maxPadding = 40; // Maximum padding for YES button in px
 
 function sadMessage() {
     let messageElement = document.getElementById("message");
@@ -33,15 +34,18 @@ function sadMessage() {
 }
 
 function increaseYesButtonSize() {
-    // Get current font size
+    // Get the current font size and padding of the YES button
     let currentFontSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+    let currentPadding = parseFloat(window.getComputedStyle(yesButton).paddingTop);
 
-    // Check if the size is smaller than the maximum size
-    if (currentFontSize < maxFontSize) {
-        let newFontSize = currentFontSize * 1.1; // Increase size by 10%
+    // Increase size until the maximum size is reached
+    if (currentFontSize < maxFontSize || currentPadding < maxPadding) {
+        let newFontSize = currentFontSize * 1.1; // Increase font size by 10%
+        let newPadding = currentPadding * 1.1; // Increase padding by 10%
 
-        // Set the new font size
-        yesButton.style.fontSize = `${Math.min(newFontSize, maxFontSize)}px`; // Limit to max size
+        // Set the new size, ensuring it doesn't exceed the maximum allowed values
+        yesButton.style.fontSize = `${Math.min(newFontSize, maxFontSize)}px`;
+        yesButton.style.padding = `${Math.min(newPadding, maxPadding)}px ${Math.min(newPadding, maxPadding)}px`;
     }
 }
 
