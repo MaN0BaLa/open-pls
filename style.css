@@ -64,13 +64,30 @@ button {
 .heart {
     position: absolute;
     color: red;
-    font-size: 40px;
-    animation: float 4s infinite;
+    font-size: 30px;
+    animation: firework 4s forwards;
     z-index: 100; /* Ensure hearts are visible above other elements */
 }
 
-@keyframes float {
-    0% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(-100px); opacity: 0.5; }
-    100% { transform: translateY(-200px); opacity: 0; }
+@keyframes firework {
+    0% { 
+        transform: scale(1) translate(0, 0); 
+        opacity: 1; 
+    }
+    25% { 
+        transform: scale(1.5) translate(50px, -50px); 
+        opacity: 0.8; 
+    }
+    50% { 
+        transform: scale(2) translate(100px, -100px); 
+        opacity: 0.6; 
+    }
+    75% { 
+        transform: scale(2.5) translate(150px, -150px); 
+        opacity: 0.4; 
+    }
+    100% { 
+        transform: scale(3) translate(200px, -200px); 
+        opacity: 0; 
+    }
 }
