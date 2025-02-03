@@ -89,4 +89,36 @@ function showMessage() {
     document.getElementById("question").style.display = "none";
     document.querySelector(".buttons").style.display = "none";
 
+
+
+
+     // Create the "Click Here" button
+    let linkButton = document.createElement("button");
+    linkButton.innerText = "Click Here 💖";
+    linkButton.style.fontSize = "18px";
+    linkButton.style.padding = "10px 20px";
+    linkButton.style.marginTop = "20px";
+    linkButton.style.backgroundColor = "#ff69b4"; // Pink button
+    linkButton.style.color = "white";
+    linkButton.style.border = "none";
+    linkButton.style.borderRadius = "10px";
+    linkButton.style.cursor = "pointer";
+    linkButton.style.transition = "0.3s";
+    
+    // Change color on hover
+    linkButton.onmouseover = function() {
+        linkButton.style.backgroundColor = "#d6336c"; // Darker pink
+    };
+    linkButton.onmouseout = function() {
+        linkButton.style.backgroundColor = "#ff69b4";
+    };
+
+    // Redirect to external link when clicked
+    linkButton.onclick = function() {
+        window.location.href = "https://your-external-link.com"; // Replace with your actual link
+    };
+
+    // Append button below the message
+    document.body.appendChild(linkButton);
+
 }
