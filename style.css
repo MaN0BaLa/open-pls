@@ -32,10 +32,10 @@ button {
     font-size: 20px;
 }
 #no {
-    background-color: #dc3545;
-    color: white;
     position: absolute;
+    transition: left 0.3s, top 0.3s;
 }
+
 #message {
     font-size: 22px;
     color: #d6336c;
