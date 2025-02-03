@@ -5,13 +5,14 @@ let sadMessages = [
     "😞 Guess I'll just eat ice cream alone...",
     "😭 I thought we were meant to be!",
     "💘 My heart is crying, Meena...",
-    "😔 I’ll be the saddest person today..."
+    "😔 I’ll be the saddest person today...",
     "😢 Are you sure, Meena?",
     "💔 That hurts...",
     "😭 Please don't say no...",
     "🥺 Give me a chance...",
     "💘 I won't stop until you say YES!",
 ];
+
 
 let messageIndex = 0;
 
