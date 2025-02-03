@@ -65,7 +65,7 @@ button {
     position: absolute;
     color: red;
     font-size: 30px;
-    animation: firework 4s forwards;
+    animation: firework 5s forwards; /* Increase duration to slow down fade */
     z-index: 100; /* Ensure hearts are visible above other elements */
 }
 
