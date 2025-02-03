@@ -17,8 +17,8 @@ let sadMessages = [
 let messageIndex = 0;
 
 let yesButton = document.getElementById("yes");
-let maxFontSize = 120; // Maximum font size for YES button in px
-let maxPadding = 40; // Maximum padding for YES button in px
+let maxFontSize = 360; // Maximum font size for YES button in px
+let maxPadding = 120; // Maximum padding for YES button in px
 
 function sadMessage() {
     let messageElement = document.getElementById("message");
