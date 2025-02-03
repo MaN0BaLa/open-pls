@@ -33,8 +33,9 @@ button {
 }
 #no {
     position: absolute;
-    transition: left 0.3s, top 0.3s;
+    transition: left 0.3s, top 0.3s; /* Smooth movement */
 }
+
 
 #message {
     font-size: 22px;
