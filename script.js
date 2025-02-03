@@ -53,20 +53,34 @@ function showMessage() {
     let messageElement = document.getElementById("message");
 
     // Show the final love message and make it bigger and bolder
-    messageElement.innerText = "I love you sooooo much Meena Kutty ❤️";
-    messageElement.style.fontSize = "60px";  // Make the message bigger
+    messageElement.innerText = "I love you Meena Kutty ❤️";
+    messageElement.style.fontSize = "40px";  // Make the message bigger
     messageElement.style.fontWeight = "bold";  // Make the message bolder
 
-    // Create heart splash animation
-    let heart = document.createElement("div");
-    heart.innerText = "❤️";
-    heart.classList.add("heart");
-    document.body.appendChild(heart);
+    // Create heart splash animation (fireworks effect)
+    for (let i = 0; i < 20; i++) { // Create 20 hearts
+        let heart = document.createElement("div");
+        heart.innerText = "❤️";
+        heart.classList.add("heart");
+        
+        // Randomize position and delay for each heart to create the fireworks effect
+        let xPosition = Math.random() * window.innerWidth;
+        let yPosition = Math.random() * window.innerHeight;
+        let animationDelay = Math.random() * 1; // Random delay for animation
+        let animationDuration = Math.random() * 3 + 2; // Random duration between 2s and 5s
+        
+        heart.style.left = `${xPosition}px`;
+        heart.style.top = `${yPosition}px`;
+        heart.style.animationDelay = `${animationDelay}s`;
+        heart.style.animationDuration = `${animationDuration}s`;
 
-    // Animate the heart
-    setTimeout(() => {
-        heart.remove(); // Remove heart after animation
-    }, 3000); // Remove heart after 3 seconds
+        document.body.appendChild(heart);
+
+        // Remove the heart after animation
+        setTimeout(() => {
+            heart.remove(); // Remove heart after animation ends
+        }, (animationDuration + animationDelay) * 1000); // Remove after total duration
+    }
 
     // Hide the question and buttons
     document.getElementById("question").style.display = "none";
