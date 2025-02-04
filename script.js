@@ -115,9 +115,11 @@ function showMessage() {
 
     // Redirect to external link when clicked
     linkButton.onclick = function() {
-        window.location.href = "https://i.pinimg.com/originals/71/43/05/714305bab62625a16fd2a17340ad06f3.gif"; // Replace with your actual link
+        window.location.href = "https://i.pinimg.com/originals/66/34/9a/66349a33238da7be98ccd76a194ca921.gif"; // Replace with your actual link
     };
 
+     // alternate - https://i.pinimg.com/originals/71/43/05/714305bab62625a16fd2a17340ad06f3.gif
+    // alternate - https://i.pinimg.com/originals/66/34/9a/66349a33238da7be98ccd76a194ca921.gif
     // Append button below the message
     document.body.appendChild(linkButton);
 
