@@ -94,7 +94,7 @@ function showMessage() {
 
      // Create the "Click Here" button
     let linkButton = document.createElement("button");
-    linkButton.innerText = "Click for GIFT 💖";
+    linkButton.innerText = " -> Click for GIFT 💖 <- ";
     linkButton.style.fontSize = "18px";
     linkButton.style.padding = "10px 20px";
     linkButton.style.marginTop = "20px";
